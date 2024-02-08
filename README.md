@@ -1,16 +1,5 @@
-# amit_flutter_final
+# Amit Flutter Final Project
 
-A new Flutter project.
+[Project on Figma](https://www.figma.com/file/h3pz9jLg4elxmfz1hVvimv/UI8-Jobsque---Job-Finder-(Copy)?type=design&node-id=3-5&mode=design)
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+[instructor explanation](https://drive.google.com/file/d/1W6PeYpJwSAqDfnbFXj_e698AN6C0FITV/view)

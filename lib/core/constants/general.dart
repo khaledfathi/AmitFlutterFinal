@@ -6,6 +6,8 @@ String APP_LOGO_IMAGE = 'assets/images/AppLogo.svg';
 //Icons
 String PERSON_ICON = 'assets/icons/person_icon.svg'; 
 String LOCK_ICON = 'assets/icons/lock_icon.svg'; 
+String FACEBOOK_ICON = 'assets/icons/facebook_icon.svg'; 
+String GOOGLE_ICON = 'assets/icons/google_icon.svg'; 
 
 //Images [onBoardingPageOne screen]
 String ON_BOARDING_ONE_IMAGE = 'assets/images/onBoarding_1.svg'; 

@@ -1,0 +1,4 @@
+enum SocialMediaNames { 
+  google, 
+  facebook,
+}

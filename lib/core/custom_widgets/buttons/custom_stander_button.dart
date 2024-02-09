@@ -2,28 +2,37 @@ import 'package:flutter/material.dart';
 
 class CustomStanderButton extends StatelessWidget {
   final String? text ; 
+  final EdgeInsets? margin; 
+  final Color? color ; 
+  final Color? textColor; 
+  final double? height; 
+  final double? width ;
   final void Function()? onPress; 
-
   const CustomStanderButton({super.key,
     this.text, 
-    this.onPress
+    this.onPress,
+    this.margin,
+    this.color,
+    this.textColor,
+    this.height, 
+    this.width
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 48,
-      width: 1000,
-      margin: const EdgeInsets.symmetric(horizontal: 20),
+      height: height??  48,
+      width: width?? 1000,
+      margin:margin ?? const EdgeInsets.symmetric(horizontal: 20),
       decoration: BoxDecoration(
-        color: const Color.fromRGBO(51, 102, 255, 1),
+        color: color ?? const Color.fromRGBO(51, 102, 255, 1),
         borderRadius: BorderRadius.circular(100),
       ),
       child: MaterialButton(
         onPressed:onPress,  
         child: Text(
           text ?? 'text',
-          style: const TextStyle(color: Colors.white, fontSize: 16),
+          style:  TextStyle(color: textColor ?? Colors.white, fontSize: 16),
         ),
       ));
   }

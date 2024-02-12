@@ -10,3 +10,5 @@ export 'gloabls/globals.dart';
 export 'routes/routes_handler.dart';
 //enums 
 export 'enum/social_media/social_media_names.dart';
+//helper
+export 'helper/helper.dart';

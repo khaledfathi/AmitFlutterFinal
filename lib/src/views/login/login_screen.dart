@@ -4,6 +4,7 @@ import 'package:amit_flutter_final/core/custom_widgets/social_media_buttons_box/
 import 'package:amit_flutter_final/core/custom_widgets/text_field/custom_text_form_filed.dart';
 import 'package:amit_flutter_final/core/custom_widgets/text_header/custom_text_header.dart';
 import 'package:amit_flutter_final/core/custom_widgets/text_line_with_navigation/custom_text_line_with_navigation.dart';
+import 'package:amit_flutter_final/src/views/forget_password/forget_password_screen.dart';
 import 'package:amit_flutter_final/src/views/login/components/login_app_bar.dart';
 import 'package:amit_flutter_final/src/views/login/components/login_option_line.dart';
 import 'package:amit_flutter_final/core/core.dart';
@@ -23,7 +24,7 @@ class LoginScreen extends StatelessWidget {
           onTap: ()=>FocusManager.instance.primaryFocus!.unfocus(),
           child: SingleChildScrollView(
             child: SizedBox(
-              height: _heightWithOutAppBar(context),
+              height:MediaQuery.of(context).size.height - _appBar.preferredSize.height - kToolbarHeight,
               child: Column(
                 children: [
                   /***** Header *****/
@@ -60,7 +61,7 @@ class LoginScreen extends StatelessWidget {
                         /***** options line *****/
                         LoginOptionLine(
                           onChangeCheckBox: (val) {},
-                          onTapForgetPassword: () {},
+                          onTapForgetPassword: ()=> Navigator.pushNamed(context,ForgetPasswordScreen.route ),
                           checkBoxValue: true,
                         ),
                         /***** -END- options line *****/
@@ -124,12 +125,5 @@ class LoginScreen extends StatelessWidget {
           ),
         ) 
     );
-  }
-
-  ///get screen height exclude appbar heigh and kToolbar hight
-  double _heightWithOutAppBar(BuildContext context) {
-    return MediaQuery.of(context).size.height -
-        _appBar.preferredSize.height -
-        kToolbarHeight;
   }
 }

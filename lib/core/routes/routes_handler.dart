@@ -1,3 +1,7 @@
+import 'package:amit_flutter_final/src/views/forget_password/forget_password_screen.dart';
+import 'package:amit_flutter_final/src/views/forget_password_check_email/forget_password_check_email_screen.dart';
+import 'package:amit_flutter_final/src/views/forget_password_new_password/forget_password_new_password_screen.dart';
+import 'package:amit_flutter_final/src/views/forget_password_success/forget_password_succuss_screen.dart';
 import 'package:amit_flutter_final/src/views/login/login_screen.dart';
 import 'package:amit_flutter_final/src/views/on_boarding/page_one/on_boarding_page_one_screen.dart';
 import 'package:amit_flutter_final/src/views/on_boarding/page_three/on_boarding_page_three_screen.dart';
@@ -15,7 +19,15 @@ class RouteHandler {
       case OnBoardingPageTwoScreen.route :  return MaterialPageRoute(builder: (context)=>const OnBoardingPageTwoScreen() , settings: setting);
       case OnBoardingPageThreeScreen.route :  return MaterialPageRoute(builder: (context)=>const OnBoardingPageThreeScreen() , settings: setting);
       /***** -END- Onboarding *****/
+      
       case LoginScreen.route :  return MaterialPageRoute(builder: (context)=>const LoginScreen() , settings: setting);
+      
+      /***** Forget Passowrd*****/ 
+      case ForgetPasswordScreen.route :  return MaterialPageRoute(builder: (context)=>const ForgetPasswordScreen() , settings: setting);
+      case ForgetPasswordCheckEmailScreen.route :  return MaterialPageRoute(builder: (context)=>const ForgetPasswordCheckEmailScreen() , settings: setting);
+      case ForgetPasswordNewPasswordScreen.route :  return MaterialPageRoute(builder: (context)=>const ForgetPasswordNewPasswordScreen() , settings: setting);
+      case ForgetPasswordSuccessScreen.route :  return MaterialPageRoute(builder: (context)=>const ForgetPasswordSuccessScreen() , settings: setting);
+      /***** -END- Forget Passowrd*****/ 
       default : return MaterialPageRoute(builder: (_)=>const PageNotFoundScreen() , settings: setting); 
     }
   }

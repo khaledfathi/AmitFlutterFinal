@@ -4,15 +4,18 @@ class CustomTextHeader extends StatelessWidget {
   final String title; 
   final String subtitle; 
   final double? height; 
+  final Color? color;
   const CustomTextHeader({super.key ,
     required this.title,
     required this.subtitle,
-    this.height
+    this.height,
+    this.color
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      color:color,
       height: height ?? 68,
       padding: const EdgeInsets.symmetric(horizontal: 20),
       width: MediaQuery.of(context).size.width,

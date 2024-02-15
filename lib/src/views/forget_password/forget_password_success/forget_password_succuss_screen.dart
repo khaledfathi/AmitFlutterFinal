@@ -14,6 +14,7 @@ class ForgetPasswordSuccessScreen extends StatelessWidget {
         appBar: AppBar(),
         body: Column(
           children: [
+            /***** Header text ******/
             Expanded(
                 flex: 3,
                 child: CustomMessageBox(
@@ -22,6 +23,9 @@ class ForgetPasswordSuccessScreen extends StatelessWidget {
                     subTitle: 'your password has been changed successfully, we will let you know if there more problems with your account'
                   ),
             ),
+            /***** -END- Header text ******/
+            
+            /***** button ******/
             Expanded( 
               flex: 1,
               child: Stack(
@@ -38,6 +42,7 @@ class ForgetPasswordSuccessScreen extends StatelessWidget {
                 ],
               )
             )
+            /***** -END- button ******/
           ],
         ));
   }

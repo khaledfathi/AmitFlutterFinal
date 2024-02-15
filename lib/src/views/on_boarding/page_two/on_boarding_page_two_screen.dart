@@ -21,7 +21,7 @@ class OnBoardingPageTwoScreen extends StatelessWidget {
         ]
       )),
       paragraph: 'Immediately join us and start applaying for the job you are intrested in.',
-      onPressPageButton: ()=> Navigator.pushReplacementNamed(context, OnBoardingPageThreeScreen.route),
+      onPressPageButton: ()=> Navigator.popAndPushNamed(context, OnBoardingPageThreeScreen.route),
     );
   }
 }

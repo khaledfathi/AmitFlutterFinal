@@ -1,7 +1,7 @@
 import 'package:amit_flutter_final/core/constants/general.dart';
 import 'package:amit_flutter_final/core/custom_widgets/buttons/custom_stander_button.dart';
 import 'package:amit_flutter_final/core/custom_widgets/message_box/custom_message_box.dart';
-import 'package:amit_flutter_final/src/views/forget_password_new_password/forget_password_new_password_screen.dart';
+import 'package:amit_flutter_final/src/views/forget_password/forget_password_new_password/forget_password_new_password_screen.dart';
 import 'package:flutter/material.dart';
 
 class ForgetPasswordCheckEmailScreen extends StatelessWidget {

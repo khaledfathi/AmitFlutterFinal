@@ -1,13 +1,14 @@
 import 'package:amit_flutter_final/core/custom_widgets/buttons/custom_stander_button.dart';
 import 'package:amit_flutter_final/core/custom_widgets/or_label/custom_or_label.dart';
-import 'package:amit_flutter_final/core/custom_widgets/social_media_buttons_box/social_medial_buttons_box.dart';
+import 'package:amit_flutter_final/core/custom_widgets/social_media_buttons_box/custom_social_medial_buttons_box.dart';
 import 'package:amit_flutter_final/core/custom_widgets/text_field/custom_text_form_filed.dart';
 import 'package:amit_flutter_final/core/custom_widgets/text_header/custom_text_header.dart';
 import 'package:amit_flutter_final/core/custom_widgets/text_line_with_navigation/custom_text_line_with_navigation.dart';
-import 'package:amit_flutter_final/src/views/forget_password/forget_password_screen.dart';
+import 'package:amit_flutter_final/src/views/forget_password/forget_password/forget_password_screen.dart';
 import 'package:amit_flutter_final/src/views/login/components/login_app_bar.dart';
 import 'package:amit_flutter_final/src/views/login/components/login_option_line.dart';
 import 'package:amit_flutter_final/core/core.dart';
+import 'package:amit_flutter_final/src/views/sign_up/sign_up/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -84,7 +85,7 @@ class LoginScreen extends StatelessWidget {
                                 CustomTextLineWithNavigator(
                                   text: 'Don\'t have account? ',
                                   buttonText: 'Register',
-                                  onTap: () => print('Register clicked'),
+                                  onTap: () => Navigator.pushNamed(context, SignUpScreen.route),
                                 ),
                                 /***** -END- Go to register ******/
                             
@@ -106,7 +107,7 @@ class LoginScreen extends StatelessWidget {
                                 /***** -END- Or Label******/
                             
                                 /***** Social media buttons section*****/
-                                SocialMediaButtonsBox( 
+                                CustomSocialMediaButtonsBox( 
                                   onTapGoogle: ()=>print('google button clickecd'),
                                   onTapFacebook: ()=>print('facebook button clickecd'),
                                 )

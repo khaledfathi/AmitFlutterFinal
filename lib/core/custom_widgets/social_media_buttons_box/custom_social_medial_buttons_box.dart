@@ -2,10 +2,10 @@ import 'package:amit_flutter_final/core/core.dart';
 import 'package:amit_flutter_final/core/custom_widgets/buttons/social_media_button.dart';
 import 'package:flutter/material.dart';
 
-class SocialMediaButtonsBox extends StatelessWidget {
+class CustomSocialMediaButtonsBox extends StatelessWidget {
   final void Function()? onTapGoogle; 
   final void Function()? onTapFacebook; 
-  const SocialMediaButtonsBox({super.key , 
+  const CustomSocialMediaButtonsBox({super.key , 
     this.onTapGoogle, 
     this.onTapFacebook,  
   });

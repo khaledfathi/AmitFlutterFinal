@@ -56,7 +56,7 @@ class OnBoardingPage extends StatelessWidget {
                       height: 20,
                     ),
                     InkWell(
-                        onTap: ()=> Navigator.pushReplacementNamed(context, LoginScreen.route), 
+                        onTap: ()=> Navigator.popAndPushNamed(context, LoginScreen.route), 
                         child: const Text(
                           'Skip',
                           style: TextStyle(fontSize: 16),

@@ -3,8 +3,8 @@ import 'package:amit_flutter_final/core/custom_widgets/buttons/custom_stander_bu
 import 'package:amit_flutter_final/core/custom_widgets/text_field/custom_text_form_filed.dart';
 import 'package:amit_flutter_final/core/custom_widgets/text_header/custom_text_header.dart';
 import 'package:amit_flutter_final/core/custom_widgets/text_line_with_navigation/custom_text_line_with_navigation.dart';
-import 'package:amit_flutter_final/src/views/forget_password/components/forge_password_app_bar.dart';
-import 'package:amit_flutter_final/src/views/forget_password_check_email/forget_password_check_email_screen.dart';
+import 'package:amit_flutter_final/src/views/forget_password/forget_password/components/forge_password_app_bar.dart';
+import 'package:amit_flutter_final/src/views/forget_password/forget_password_check_email/forget_password_check_email_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

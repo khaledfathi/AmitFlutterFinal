@@ -22,7 +22,7 @@ class OnBoardingPageThreeScreen extends StatelessWidget {
         ]
       )),
       paragraph: 'The better the skills you have, the greater the good job oppertunities for you',
-      onPressPageButton: ()=> Navigator.pushReplacementNamed(context, LoginScreen.route), 
+      onPressPageButton: ()=> Navigator.popAndPushNamed(context, LoginScreen.route), 
     );
   }
 }

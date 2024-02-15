@@ -20,7 +20,8 @@ class OnBoardingPageOneScreen extends StatelessWidget {
         ]
       )),
       paragraph: 'Explore over 25,924 available job roles and upgrade your operator now . ',
-      onPressPageButton: ()=> Navigator.pushReplacementNamed(context , OnBoardingPageTwoScreen.route),
+      onPressPageButton: ()=> Navigator.popAndPushNamed(context , OnBoardingPageTwoScreen.route),
+      pageButtonText: 'Next',
     );
   }
 }

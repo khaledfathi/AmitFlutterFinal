@@ -59,6 +59,7 @@ class SignUpScreen extends StatelessWidget {
                         /***** Password Field ******/
                         CustomTextFormField(
                           hintText: 'Password',
+                          obscureText: true,
                           prefixIcon: SvgPicture.asset(LOCK_ICON),
                           suffixIcon: const Icon(Icons.visibility_outlined),
                         ),

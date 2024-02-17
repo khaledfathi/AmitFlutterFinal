@@ -5,9 +5,33 @@ import 'package:amit_flutter_final/src/views/sign_up/sign_up_location/components
 import 'package:amit_flutter_final/src/views/sign_up/sign_up_success/sign_up_success_screen.dart';
 import 'package:flutter/material.dart';
 
-class SignUpLocationScreen  extends StatelessWidget {
+class SignUpLocationScreen  extends StatefulWidget {
   static const String route = 'sign-up-loation';
+
   const SignUpLocationScreen ({super.key});
+
+  @override
+  State<SignUpLocationScreen> createState() => _SignUpLocationScreenState();
+}
+
+class _SignUpLocationScreenState extends State<SignUpLocationScreen> {
+  // ignore: prefer_final_fields
+  List<Map> _countryData= [
+    {'name': 'United State', 'image': US_FLAG_IMAGE },
+    {'name': 'Malaysia', 'image': MALAYSIA_FLAG_ICON },
+    {'name': 'Singapore', 'image': SINGAPORE_FLAG_ICON },
+    {'name': 'Indonesia', 'image': INDONESIA_FLAG_ICON },
+    {'name': 'Philippines', 'image': PHILIPPINES_FLAG_ICON },
+    {'name': 'Polandia', 'image': POLANDIA_FLAG_ICON },
+    {'name': 'India', 'image': INDIA_FLAG_ICON },
+    {'name': 'Vietnam', 'image': VIETNAM_FLAG_ICON },
+    {'name': 'China', 'image': CHINA_FLAG_ICON },
+    {'name': 'Canda', 'image': CANADA_FLAG_ICON },
+    {'name': 'Saudi Arabia', 'image': KSA_FLAG_ICON },
+    {'name': 'Argentina', 'image': ARGENTINA_FLAG_ICON },
+    {'name': 'Brazil', 'image': BRAZIL_FLAG_ICON },
+  ];
+  int _countrySelected = 0; 
 
   @override
   Widget build(BuildContext context) {
@@ -36,21 +60,7 @@ class SignUpLocationScreen  extends StatelessWidget {
                 child: Wrap(
                   runSpacing: 20,
                   spacing: 20,
-                  children: [
-                    SignUpCountryBox(acticve: true, countryName: 'United State ', flag:  Image.asset(US_FLAG_IMAGE)),
-                    SignUpCountryBox(acticve: false, countryName: 'Malaysia', flag:  Image.asset(MALAYSIA_FLAG_ICON)),
-                    SignUpCountryBox(acticve: false, countryName: 'Singapore', flag:  Image.asset(SINGAPORE_FLAG_ICON)),
-                    SignUpCountryBox(acticve: false, countryName: 'Indonesia', flag:  Image.asset(INDONESIA_FLAG_ICON)),
-                    SignUpCountryBox(acticve: false, countryName: 'Philippines', flag:  Image.asset(PHILIPPINES_FLAG_ICON)),
-                    SignUpCountryBox(acticve: false, countryName: 'Polandia', flag:  Image.asset(POLANDIA_FLAG_ICON)),
-                    SignUpCountryBox(acticve: false, countryName: 'India', flag:  Image.asset(INDIA_FLAG_ICON)),
-                    SignUpCountryBox(acticve: false, countryName: 'vietnam', flag:  Image.asset(VIETNAM_FLAG_ICON)),
-                    SignUpCountryBox(acticve: false, countryName: 'China', flag:  Image.asset(CHINA_FLAG_ICON)),
-                    SignUpCountryBox(acticve: false, countryName: 'Canda', flag:  Image.asset(CANADA_FLAG_ICON)),
-                    SignUpCountryBox(acticve: false, countryName: 'Saudi Arabia', flag:  Image.asset(KSA_FLAG_ICON)),
-                    SignUpCountryBox(acticve: false, countryName: 'Argentina', flag:  Image.asset(ARGENTINA_FLAG_ICON)),
-                    SignUpCountryBox(acticve: false, countryName: 'Brazil', flag:  Image.asset(BRAZIL_FLAG_ICON)),
-                  ],
+                  children: _countryList(), 
                 ),
               ),
             )
@@ -78,5 +88,23 @@ class SignUpLocationScreen  extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  /// create list of countries widgets 
+  List<Widget> _countryList (){
+    List<Widget> countryList =[]; 
+    for (var i = 0; i < _countryData.length; i++) {
+      countryList.add(
+        SignUpCountryBox(
+          acticve: _countrySelected == i ? true : false,
+          countryName: _countryData[i]['name'], 
+          flag:  Image.asset(_countryData[i]['image'] ) , 
+          onTap: ()=> setState(() {
+            _countrySelected = i; 
+          }),
+        ),
+      );
+    }
+    return countryList; 
   }
 }

@@ -3,6 +3,7 @@ import 'package:amit_flutter_final/core/enum/social_media/social_media_names.dar
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+// ignore: must_be_immutable
 class SocialMediaButton extends StatelessWidget {
   final SocialMediaNames? name ; 
   final void Function()? onTap; 

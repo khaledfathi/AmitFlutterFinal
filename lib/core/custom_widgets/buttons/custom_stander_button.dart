@@ -30,9 +30,12 @@ class CustomStanderButton extends StatelessWidget {
       ),
       child: MaterialButton(
         onPressed:onPress,  
-        child: Text(
-          text ?? 'text',
-          style:  TextStyle(color: textColor ?? Colors.white, fontSize: 16),
+        child: FittedBox(
+          fit:BoxFit.scaleDown,
+          child: Text(
+            text ?? 'text',
+            style:  TextStyle(color: textColor ?? Colors.white, fontSize: 16),
+          ),
         ),
       ));
   }

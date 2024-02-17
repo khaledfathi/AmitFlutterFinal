@@ -3,7 +3,12 @@ import 'package:amit_flutter_final/src/views/forget_password/forget_password_che
 import 'package:amit_flutter_final/src/views/forget_password/forget_password_new_password/forget_password_new_password_screen.dart';
 import 'package:amit_flutter_final/src/views/forget_password/forget_password_success/forget_password_succuss_screen.dart';
 import 'package:amit_flutter_final/src/views/login/login_screen.dart';
+import 'package:amit_flutter_final/src/views/main/applied/applied_screen%20copy.dart';
+import 'package:amit_flutter_final/src/views/main/home/home_screen.dart';
 import 'package:amit_flutter_final/src/views/main/main_screen.dart';
+import 'package:amit_flutter_final/src/views/main/messages/messages_screen.dart';
+import 'package:amit_flutter_final/src/views/main/profile/profile_screen.dart';
+import 'package:amit_flutter_final/src/views/main/saved/saved_screen.dart';
 import 'package:amit_flutter_final/src/views/on_boarding/page_one/on_boarding_page_one_screen.dart';
 import 'package:amit_flutter_final/src/views/on_boarding/page_three/on_boarding_page_three_screen.dart';
 import 'package:amit_flutter_final/src/views/on_boarding/page_two/on_boarding_page_two_screen.dart';
@@ -45,6 +50,14 @@ class RouteHandler {
       /***** Main Screen *****/ 
       case MainScreen.route :  return MaterialPageRoute(builder: (context)=>const MainScreen() , settings: setting);
       /***** -END- Main Screen *****/ 
+
+      /***** Main Sub Screen *****/ 
+      case HomeScreen.route :  return MaterialPageRoute(builder: (context)=>const HomeScreen() , settings: setting);
+      case MessagesScreen.route :  return MaterialPageRoute(builder: (context)=>const MessagesScreen() , settings: setting);
+      case AppliedScreen.route :  return MaterialPageRoute(builder: (context)=>const AppliedScreen() , settings: setting);
+      case SavedScreen.route :  return MaterialPageRoute(builder: (context)=>const SavedScreen() , settings: setting);
+      case ProfileScreen.route :  return MaterialPageRoute(builder: (context)=>const ProfileScreen() , settings: setting);
+      /***** -END- Main Sub Screen *****/ 
 
       default : return MaterialPageRoute(builder: (_)=>const PageNotFoundScreen() , settings: setting); 
     }

@@ -42,6 +42,7 @@ const String CANADA_FLAG_ICON=  'assets/images/canada_flag.png';
 const String KSA_FLAG_ICON=  'assets/images/ksa_flag.png';
 const String ARGENTINA_FLAG_ICON=  'assets/images/argentina_flag.png';
 const String BRAZIL_FLAG_ICON=  'assets/images/brazil_flag.png';
-
+//Images [job icons]
+const String JOB_1_ICON = 'assets/images/job_1_icon.png';
 //Sharedpreferences
 const String IS_LOGIN = 'isLogin'; 

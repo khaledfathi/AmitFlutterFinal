@@ -6,18 +6,25 @@ import 'package:amit_flutter_final/src/views/sign_up/sign_up_work_type/component
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class SignUpWorkTypeScreen extends StatelessWidget {
+class SignUpWorkTypeScreen extends StatefulWidget {
   static const String route = 'sign-up-work-type';
 
-  final List<Map> _workTypes = const [
-    {'title':'UI/UX Designer' , 'icon' : UI_UX_WORK_ICON},
-    {'title':'Ilustrator Designer' , 'icon' : ILUSTRATOR_WORK_ICON},
-    {'title':'Developer' , 'icon' : DEVELOPER_WORK_ICON},
-    {'title':'Managment' , 'icon' : MANAGMENT_WORK_ICON},
-    {'title':'Information tehnology' , 'icon' : IT_WORK_ICON},
-    {'title':'Research and Analytics' , 'icon' : RESEARCH_WORK_ICON},
-  ];
+
   const SignUpWorkTypeScreen({super.key});
+
+  @override
+  State<SignUpWorkTypeScreen> createState() => _SignUpWorkTypeScreenState();
+}
+
+class _SignUpWorkTypeScreenState extends State<SignUpWorkTypeScreen> {
+  final List<Map> _workTypes =  [
+    {'title':'UI/UX Designer' , 'icon' : UI_UX_WORK_ICON , 'active': false},
+    {'title':'Ilustrator Designer' , 'icon' : ILUSTRATOR_WORK_ICON , 'active': false},
+    {'title':'Developer' , 'icon' : DEVELOPER_WORK_ICON , 'active': false},
+    {'title':'Managment' , 'icon' : MANAGMENT_WORK_ICON , 'active': false},
+    {'title':'Information tehnology' , 'icon' : IT_WORK_ICON , 'active': false},
+    {'title':'Research and Analytics' , 'icon' : RESEARCH_WORK_ICON , 'active': false},
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -51,8 +58,11 @@ class SignUpWorkTypeScreen extends StatelessWidget {
             itemCount: _workTypes.length,
             itemBuilder: (context , index){
               return SignUpWorkTypeBox(
-                onTap: ()=>print('work type nmber $index is clicked'),
-                active: true,
+                onTap: (){
+                  _workTypes[index]['active'] = !_workTypes[index]['active'];
+                  setState((){});
+                },
+                active: _workTypes[index]['active'],
                 icon: SvgPicture.asset(_workTypes[index]['icon']),
                 title: _workTypes[index]['title'],
               );

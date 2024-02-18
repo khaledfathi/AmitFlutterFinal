@@ -1,9 +1,10 @@
 import 'package:amit_flutter_final/core/constants/general.dart';
+import 'package:amit_flutter_final/core/custom_widgets/text_field/custom_search_bar.dart';
 import 'package:amit_flutter_final/core/custom_widgets/text_line_view_all/custom_text_line_view_all.dart';
 import 'package:amit_flutter_final/src/views/main/home/components/home_header.dart';
 import 'package:amit_flutter_final/src/views/main/home/components/home_recent_job_box.dart';
-import 'package:amit_flutter_final/src/views/main/home/components/home_search_bar.dart';
 import 'package:amit_flutter_final/src/views/main/home/components/home_suggest_job_box.dart';
+import 'package:amit_flutter_final/src/views/main/home/home_search/home_search_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -21,13 +22,15 @@ class HomeScreen extends StatelessWidget {
               /***** Header *****/
               HomeHeader(
                 userName: 'Rafif Dain',
-                onTapNotification: () =>
-                    print('notification button is clicked '),
+                onTapNotification: () => print('notification button is clicked '),
               ),
               /***** -END- Header *****/
 
               /***** Search bar *****/
-              const HomeSearchBar(),
+              CustomSearchBar(
+                enable: false,
+                onTapSearch: ()=>Navigator.pushNamed(context, HomeSearchScreen.route ),
+              ),
               /***** -END- Search bar *****/
 
               /***** Suggested Jobs line *****/

@@ -5,6 +5,7 @@ import 'package:amit_flutter_final/src/views/forget_password/forget_password_suc
 import 'package:amit_flutter_final/src/views/login/login_screen.dart';
 import 'package:amit_flutter_final/src/views/main/applied/applied_screen%20copy.dart';
 import 'package:amit_flutter_final/src/views/main/home/home_screen.dart';
+import 'package:amit_flutter_final/src/views/main/home/home_search/home_search_screen.dart';
 import 'package:amit_flutter_final/src/views/main/main_screen.dart';
 import 'package:amit_flutter_final/src/views/main/messages/messages_screen.dart';
 import 'package:amit_flutter_final/src/views/main/profile/profile_screen.dart';
@@ -30,7 +31,9 @@ class RouteHandler {
       case OnBoardingPageThreeScreen.route :  return MaterialPageRoute(builder: (context)=>const OnBoardingPageThreeScreen() , settings: setting);
       /***** -END- Onboarding *****/
       
+      /***** Login Screen *****/
       case LoginScreen.route :  return MaterialPageRoute(builder: (context)=>const LoginScreen() , settings: setting);
+      /***** -END- Login Screen *****/
       
       /***** Forget Passowrd*****/ 
       case ForgetPasswordScreen.route :  return MaterialPageRoute(builder: (context)=>const ForgetPasswordScreen() , settings: setting);
@@ -53,6 +56,9 @@ class RouteHandler {
 
       /***** Main Sub Screen *****/ 
       case HomeScreen.route :  return MaterialPageRoute(builder: (context)=>const HomeScreen() , settings: setting);
+      //home search 
+      case HomeSearchScreen.route :  return MaterialPageRoute(builder: (context)=>const HomeSearchScreen() , settings: setting);
+
       case MessagesScreen.route :  return MaterialPageRoute(builder: (context)=>const MessagesScreen() , settings: setting);
       case AppliedScreen.route :  return MaterialPageRoute(builder: (context)=>const AppliedScreen() , settings: setting);
       case SavedScreen.route :  return MaterialPageRoute(builder: (context)=>const SavedScreen() , settings: setting);

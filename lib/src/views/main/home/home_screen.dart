@@ -1,3 +1,4 @@
+import 'package:amit_flutter_final/core/constants/general.dart';
 import 'package:amit_flutter_final/core/custom_widgets/text_line_view_all/custom_text_line_view_all.dart';
 import 'package:amit_flutter_final/src/views/main/home/components/home_header.dart';
 import 'package:amit_flutter_final/src/views/main/home/components/home_recent_job_box.dart';
@@ -44,13 +45,7 @@ class HomeScreen extends StatelessWidget {
                 margin: const EdgeInsets.symmetric(horizontal: 20),
                 child: ListView(
                   scrollDirection: Axis.horizontal,
-                  children: const [
-                    HomeSuggestJobBox(),
-                    HomeSuggestJobBox(),
-                    HomeSuggestJobBox(),
-                    HomeSuggestJobBox(),
-                    HomeSuggestJobBox(),
-                  ],
+                  children: _fackeJobBoxs(10),
                 ),
               ),
               /***** -END- Recent Jobs *****/
@@ -70,13 +65,7 @@ class HomeScreen extends StatelessWidget {
                 margin: const EdgeInsets.symmetric(horizontal: 20),
                 height: 250,
                 child: ListView(
-                  children: const [
-                    HomeRecentJobBox(),
-                    HomeRecentJobBox(),
-                    HomeRecentJobBox(),
-                    HomeRecentJobBox(),
-                    HomeRecentJobBox(),
-                  ],
+                  children: _fakeRecentJob(10),
                 ),
     )/***** -END- Recent job Items *****/
             ],
@@ -84,5 +73,44 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  List<Widget> _fackeJobBoxs (int count ){
+    List<Widget> jobBoxs = []; 
+    for (var i = 0; i < count; i++) {
+      jobBoxs.add(
+        HomeSuggestJobBox(
+          jobIcon: JOB_1_ICON,
+          title: 'Product Designer', 
+          subTitle: 'Zoom . United State',
+          categoryOne: 'Full time', 
+          categoryTwo: 'Remote', 
+          categoryThree: 'Design', 
+          salary: '\$10-12k' ,
+          onTapBookmark: ()=>print('bookmark button is clicked '),
+          onTapApply: ()=>print('apply button is clicked '),
+        )
+      );
+    }
+    return jobBoxs;
+  }
+
+  List<Widget> _fakeRecentJob (int count ){
+    List<Widget> recentJobBoxs = []; 
+    for (var i = 0; i < count; i++) {
+      recentJobBoxs.add(
+        HomeRecentJobBox(
+          jobIcon: JOB_1_ICON,
+          title: 'Product Designer', 
+          subTitle: 'Zoom . United State ', 
+          categoryOne: 'Full Time', 
+          categoryTwo: 'Remote', 
+          categoryThree: 'Senior', 
+          salary:'\$15K', 
+          onTapBookmark: ()=>print('recent job bookmark is clicked'),
+        )   
+      );
+    }
+    return recentJobBoxs ;
   }
 }

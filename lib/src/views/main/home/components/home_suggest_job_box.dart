@@ -1,9 +1,27 @@
-import 'package:amit_flutter_final/core/constants/general.dart';
 import 'package:amit_flutter_final/core/custom_widgets/buttons/custom_stander_button.dart';
 import 'package:flutter/material.dart';
 
 class HomeSuggestJobBox extends StatelessWidget {
-  const HomeSuggestJobBox({super.key});
+  final String jobIcon;
+  final String title;
+  final String subTitle;
+  final void Function()? onTapBookmark;
+  final String categoryOne;
+  final String categoryTwo;
+  final String categoryThree;
+  final String salary;
+  final void Function()? onTapApply;
+  const HomeSuggestJobBox(
+      {super.key,
+      required this.jobIcon,
+      required this.title,
+      required this.subTitle,
+      this.onTapBookmark,
+      required this.categoryOne,
+      required this.categoryTwo,
+      required this.categoryThree,
+      required this.salary,
+      this.onTapApply});
 
   @override
   Widget build(BuildContext context) {
@@ -33,14 +51,14 @@ class HomeSuggestJobBox extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Image.asset(
-                          JOB_1_ICON,
+                          jobIcon,
                           width: 32,
                           height: 32,
                         ),
                       ),
                     )),
                 //middle
-                const Expanded(
+                Expanded(
                   flex: 2,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -48,15 +66,15 @@ class HomeSuggestJobBox extends StatelessWidget {
                     children: [
                       FittedBox(
                           fit: BoxFit.scaleDown,
-                          child: Text('Product Designer',
-                              style: TextStyle(
+                          child: Text(title,
+                              style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 18,
                                   fontWeight: FontWeight.w500))),
                       FittedBox(
                           fit: BoxFit.scaleDown,
-                          child: Text('Zoom . United State',
-                              style: TextStyle(
+                          child: Text(subTitle,
+                              style: const TextStyle(
                                   color: Colors.white, fontSize: 12))),
                     ],
                   ),
@@ -66,7 +84,7 @@ class HomeSuggestJobBox extends StatelessWidget {
                     flex: 1,
                     child: Center(
                       child: InkWell(
-                        onTap: () => print('book mark button is clicked'),
+                        onTap: onTapBookmark,
                         child: const Icon(
                           Icons.bookmark_outline_rounded,
                           size: 30,
@@ -87,38 +105,29 @@ class HomeSuggestJobBox extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   //left
-                  Expanded(
-                      child: Container(
+                   Expanded(
                     child: CustomStanderButton(
-                      color: const Color.fromRGBO(255, 255, 255, 0.14),
-                      margin: const EdgeInsets.symmetric(horizontal: 5),
+                      color:  const Color.fromRGBO(255, 255, 255, 0.14),
+                      margin:  const EdgeInsets.symmetric(horizontal: 5),
                       height: 35,
-                      text: 'Full Time',
-                      onPress: () => print('full time button is clicked'),
-                    ),
-                  )),
+                      text: categoryOne,
+                    )),
                   //middle
                   Expanded(
-                      child: Container(
                     child: CustomStanderButton(
                       color: const Color.fromRGBO(255, 255, 255, 0.14),
                       margin: const EdgeInsets.symmetric(horizontal: 5),
                       height: 35,
-                      text: 'Remote',
-                      onPress: () => print(' remote button is clicked'),
-                    ),
-                  )),
+                      text: categoryTwo,
+                    )),
                   //right
                   Expanded(
-                      child: Container(
                     child: CustomStanderButton(
                       margin: const EdgeInsets.symmetric(horizontal: 5),
                       color: const Color.fromRGBO(255, 255, 255, 0.14),
                       height: 35,
-                      text: 'Design',
-                      onPress: () => print('design button is clicked'),
-                    ),
-                  ))
+                      text: categoryThree,
+                    ))
                 ],
               ),
             ),
@@ -137,27 +146,25 @@ class HomeSuggestJobBox extends StatelessWidget {
                   child: FittedBox(
                       fit: BoxFit.scaleDown,
                       child: RichText(
-                          text: const TextSpan(
-                              text: '\$12-15k',
-                              style: TextStyle(
-                                  fontSize: 24, fontWeight: FontWeight.w500),
-                              children: [
-                            TextSpan(
-                                text: '/month',
-                                style: TextStyle(
-                                    fontSize: 12,
-                                    color: Color.fromRGBO(255, 255, 255, 0.5))),
-                          ]))),
+                          text: TextSpan(
+                              text: salary,
+                              style: const TextStyle( fontSize: 24, fontWeight: FontWeight.w500),
+                              children: const[
+                                TextSpan(
+                                    text: '/month',
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        color: Color.fromRGBO(255, 255, 255, 0.5))),
+                                ]))),
                 )),
                 //right
                 Expanded(
-                    child: Container(
-                  child: CustomStanderButton(
+                  child : CustomStanderButton(
                     text: 'Apply Now',
                     height: 32,
-                    onPress: () => print('apply now button is clicked'),
+                    onPress: onTapApply
                   ),
-                ))
+                ),
               ],
             ),
           )

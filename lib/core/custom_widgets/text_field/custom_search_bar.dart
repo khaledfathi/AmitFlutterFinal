@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 class CustomSearchBar extends StatelessWidget {
   final EdgeInsets? margin; 
   final void Function()? onTapSearch ; 
+  final void Function()? onTapSearchIcon; 
   final bool? enable; 
   final Widget? suffixIcon; 
   const CustomSearchBar({super.key,
     this.margin, 
     this.onTapSearch,
+    this.onTapSearchIcon,
     this.enable,
     this.suffixIcon
   });
@@ -28,7 +30,7 @@ class CustomSearchBar extends StatelessWidget {
           decoration: InputDecoration(
             enabled: enable ?? true,
             border: InputBorder.none,
-            prefixIcon:  const Icon(Icons.search),
+            prefixIcon:  IconButton(onPressed: onTapSearchIcon, icon:const Icon(Icons.search), ) ,
             suffixIcon: suffixIcon,
           ),
         ),

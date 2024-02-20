@@ -44,5 +44,7 @@ const String ARGENTINA_FLAG_ICON=  'assets/images/argentina_flag.png';
 const String BRAZIL_FLAG_ICON=  'assets/images/brazil_flag.png';
 //Images [job icons]
 const String JOB_1_ICON = 'assets/images/job_1_icon.png';
+//Images [apply job] 
+const String APPLY_JOB_TWITTER_ICON = 'assets/images/twitter_job.png';
 //Sharedpreferences
 const String IS_LOGIN = 'isLogin'; 

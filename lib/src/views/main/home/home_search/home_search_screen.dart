@@ -23,7 +23,7 @@ class _HomeSearchScreenState extends State<HomeSearchScreen> {
         title: CustomSearchBar(
           margin: const EdgeInsets.symmetric(horizontal: 10) ,
           suffixIcon: IconButton(onPressed: (){}, icon: const Icon(Icons.close),),
-          onTapSearch: (){},
+          onTapSearchIcon: () => print('search icon button is clicked'),
         ) 
       ),
       body: Padding(

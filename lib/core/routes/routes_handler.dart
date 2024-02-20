@@ -1,3 +1,4 @@
+import 'package:amit_flutter_final/src/views/apply_job/apply_job_screen.dart';
 import 'package:amit_flutter_final/src/views/forget_password/forget_password/forget_password_screen.dart';
 import 'package:amit_flutter_final/src/views/forget_password/forget_password_check_email/forget_password_check_email_screen.dart';
 import 'package:amit_flutter_final/src/views/forget_password/forget_password_new_password/forget_password_new_password_screen.dart';
@@ -64,6 +65,10 @@ class RouteHandler {
       case SavedScreen.route :  return MaterialPageRoute(builder: (context)=>const SavedScreen() , settings: setting);
       case ProfileScreen.route :  return MaterialPageRoute(builder: (context)=>const ProfileScreen() , settings: setting);
       /***** -END- Main Sub Screen *****/ 
+
+      /***** Apply job screen *****/ 
+      case ApplyJobScreen.route :  return MaterialPageRoute(builder: (context)=>const ApplyJobScreen() , settings: setting);
+      /***** -END- Apply job screen *****/ 
 
       default : return MaterialPageRoute(builder: (_)=>const PageNotFoundScreen() , settings: setting); 
     }

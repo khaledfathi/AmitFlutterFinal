@@ -51,6 +51,43 @@ class _SignUpLocationScreenState extends State<SignUpLocationScreen> {
           ),
           /***** -END- Header Text ******/
 
+          /***** Work From buttons ******/
+          Container(
+              height: 46,
+              margin: const EdgeInsets.only(bottom: 10, left: 20, right: 20),
+              decoration: BoxDecoration(
+                color: const Color.fromRGBO(244, 244, 245, 1),
+                borderRadius: BorderRadius.circular(100),
+              ),
+              child: const Row(
+                children: [
+                  Expanded(
+                      child: CustomStanderButton(
+                    text: 'Work From Office',
+                    margin: EdgeInsets.all(0),
+                    color: Colors.transparent,
+                    textColor: Color.fromRGBO(107, 114, 128, 1),
+                  )),
+                  Expanded(
+                      child: CustomStanderButton(
+                    text: 'Remote Work',
+                    margin: EdgeInsets.all(0),
+                  )),
+                ],
+              )),
+          /***** -END- Work From buttons ******/
+
+          /***** Select country header text ******/
+          Container(
+            margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+            child: const FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text( 'Select the country you want for your job',
+                  style: TextStyle(fontSize: 16),
+                )),
+          ),
+          /***** -END- Select country header text ******/
+
           /***** countries ******/
           Expanded( 
             flex: 6,

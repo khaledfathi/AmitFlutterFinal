@@ -1,7 +1,9 @@
 import 'package:amit_flutter_final/core/constants/general.dart';
 import 'package:amit_flutter_final/core/custom_widgets/buttons/custom_stander_button.dart';
 import 'package:amit_flutter_final/src/views/main/main_screen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SignUPSuccessScreen extends StatelessWidget {
@@ -26,8 +28,8 @@ class SignUPSuccessScreen extends StatelessWidget {
                   height: 142,
                   child: SvgPicture.asset(ACCOUNT_SUCCESS_IMAGE , width: 173,),
                 ),
-                const Text('Your account has been set up!' , textAlign: TextAlign.center , style: TextStyle(fontSize: 24),),
-                const Text('we have customized feed according to your preferences ', textAlign: TextAlign.center, style: TextStyle(color: Color.fromARGB(107,114 , 128,1,)),),
+                const FittedBox(fit: BoxFit.scaleDown, child: Text('Your account has been set up!' , textAlign: TextAlign.center , style: TextStyle(fontSize: 24),)),
+                const FittedBox(fit: BoxFit.scaleDown, child: Text('we have customized feed according to your preferences ', textAlign: TextAlign.center, style: TextStyle(color: Color.fromARGB(107,114 , 128,1,)),)),
               ],
             ),
           ),

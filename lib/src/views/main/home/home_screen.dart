@@ -1,6 +1,7 @@
 import 'package:amit_flutter_final/core/constants/general.dart';
 import 'package:amit_flutter_final/core/custom_widgets/text_field/custom_search_bar.dart';
 import 'package:amit_flutter_final/core/custom_widgets/text_line_view_all/custom_text_line_view_all.dart';
+import 'package:amit_flutter_final/src/views/apply_job/apply_job_screen.dart';
 import 'package:amit_flutter_final/src/views/main/home/components/home_header.dart';
 import 'package:amit_flutter_final/src/views/main/home/components/home_recent_job_box.dart';
 import 'package:amit_flutter_final/src/views/main/home/components/home_suggest_job_box.dart';
@@ -48,7 +49,7 @@ class HomeScreen extends StatelessWidget {
                 margin: const EdgeInsets.symmetric(horizontal: 20),
                 child: ListView(
                   scrollDirection: Axis.horizontal,
-                  children: _fackeJobBoxs(10),
+                  children: _fackeJobBoxs(context , 10),
                 ),
               ),
               /***** -END- Recent Jobs *****/
@@ -78,7 +79,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  List<Widget> _fackeJobBoxs (int count ){
+  List<Widget> _fackeJobBoxs (BuildContext context,  int count ){
     List<Widget> jobBoxs = []; 
     for (var i = 0; i < count; i++) {
       jobBoxs.add(
@@ -91,7 +92,7 @@ class HomeScreen extends StatelessWidget {
           categoryThree: 'Design', 
           salary: '\$10-12k' ,
           onTapBookmark: ()=>print('bookmark button is clicked '),
-          onTapApply: ()=>print('apply button is clicked '),
+          onTapApply: ()=> Navigator.pushNamed(context, ApplyJobScreen.route),
         )
       );
     }

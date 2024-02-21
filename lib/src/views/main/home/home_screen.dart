@@ -67,8 +67,9 @@ class HomeScreen extends StatelessWidget {
               /***** Recent job Items *****/
               Container(
                 margin: const EdgeInsets.symmetric(horizontal: 20),
-                height: 250,
                 child: ListView(
+                  shrinkWrap: true,
+                  physics: const ScrollPhysics(),
                   children: _fakeRecentJob(10),
                 ),
     )/***** -END- Recent job Items *****/

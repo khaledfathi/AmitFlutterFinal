@@ -13,21 +13,30 @@ class ApplyJobDescriptionSection extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            /***** Job Description section *****/
+            // title
             Padding(
               padding: EdgeInsets.only(bottom: 10),
               child: Text('Job Description' , style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold ,),)
             ),
+            //article  
             Text('Your role as the UI Designer is to use interactive components on various platforms (web, desktop and mobile). This will include producing high-fidelity mock-ups, iconography, UI illustrations/graphics, and other graphic elements. As the UI Designer, you will be supporting the wider design team with the internal Design System, tying together the visual language. You will with other UI and UX Designers, Product Managers, and Engineering teams in a highly customer-focused agile environment to help define the vision of the products.', 
               textAlign: TextAlign.justify,
             ),
+            /***** -END- Job Description section *****/
+            
+            /***** Skills section *****/
+            //title 
             Padding(
               padding: EdgeInsets.only(top: 20),
               child: Text('Skill Required' , style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),)
             ),
+            //article 
             SizedBox(height: 10,),
             Text('Your role as the UI Designer is to use interactive components on various platforms (web, desktop and mobile). This will include producing high-fidelity mock-ups, iconography, UI illustrations/graphics, and other graphic elements. As the UI Designer, you will be supporting the wider design team with the internal Design System, tying together the visual language. You will with other UI and UX Designers, Product Managers, and Engineering teams in a highly customer-focused agile environment to help define the vision of the products.',
               textAlign: TextAlign.justify,
             ),
+            /***** -END- Skills section *****/
           ],
         ),
       ),

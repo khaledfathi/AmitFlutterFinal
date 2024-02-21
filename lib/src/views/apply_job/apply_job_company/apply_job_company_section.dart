@@ -7,15 +7,18 @@ class ApplyJobCompanySection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Padding(
-      padding: EdgeInsets.only(left: 20, right: 20 , top: 20),
+      padding: const EdgeInsets.only(left: 20, right: 20 , top: 20),
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
+            /***** Contact us section  *****/
+            //title
+            const Padding(
               padding: EdgeInsets.symmetric(vertical: 15),
               child: Text('Contact Us ' , style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold ,),)
             ),
+            //details boxes
             Padding(
               padding: const EdgeInsets.only(bottom: 15),
               child: Row(
@@ -30,6 +33,9 @@ class ApplyJobCompanySection extends StatelessWidget {
                 ],
               ),
             ),
+            /***** -END- Contact us section  *****/
+
+            /***** About company section *****/
             const Text('About Company' , style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold ,),),
             const Padding(
               padding: EdgeInsets.only(top: 10) , 
@@ -37,6 +43,7 @@ class ApplyJobCompanySection extends StatelessWidget {
                 textAlign: TextAlign.justify, 
               ),
             )
+            /***** -END- About company section *****/
           ],
         ) ,
       ),
